@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ResourceList } from './component/resource-list/resource-list';
 
-const routes: Routes = [
-     {path: '', component: ResourceList},
+export const routes: Routes = [
+    {path: '', component: ResourceList},
     {
         path: '',
         pathMatch: 'full',

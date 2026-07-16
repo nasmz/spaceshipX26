@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ResourceService } from '../../services/resource/resource.service';
 import { CommonModule } from '@angular/common';
-import { ResourcePassenger } from '../../models/resource.model';
+import { ResourceData } from '../../models/resource.model';
 
 @Component({
   selector: 'app-resource-list',
@@ -14,7 +14,7 @@ export class ResourceList implements OnInit {
 
   constructor(private readonly resourceSvc: ResourceService) {}
 
-  resources: ResourcePassenger[] = [
+  resources: ResourceData[] = [
     { id: 1, resourceName: 'Food Station', resourcesLevel: 'Silver', status: 'Available' },
     { id: 2, resourceName: 'Sleeping Pods', resourcesLevel: 'Silver', status: 'Available' },
     { id: 3, resourceName: 'Basic Hygiene', resourcesLevel: 'Silver', status: 'Available' },

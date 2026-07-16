@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ResourcePassenger } from '../../models/resource.model'; // model resources data
+import { ResourceData } from '../../models/resource.model'; // model resources data
 
 @Injectable({
   providedIn: 'root',
@@ -12,19 +12,19 @@ export class ResourceService {
   constructor(private readonly http: HttpClient) { }
 
   getResourcesList() {//get all resources
-    return this.http.get<ResourcePassenger[]>(this.apiUrl);
+    return this.http.get<ResourceData[]>(this.apiUrl);
   }
 
   getResourceById(id: number) {//get a resource by ID
-    return this.http.get<ResourcePassenger>(`${this.apiUrl}/${id}`);
+    return this.http.get<ResourceData>(`${this.apiUrl}/${id}`);
   }
 
-  addResource(resource: ResourcePassenger) {//add a new resource
-    return this.http.post<ResourcePassenger>(this.apiUrl, resource);
+  addResource(resource: ResourceData) {//add a new resource
+    return this.http.post<ResourceData>(this.apiUrl, resource);
   }
 
-  updatePassengerResource(id: number, resource: ResourcePassenger) {//update passenger resource
-    return this.http.put<ResourcePassenger>(`${this.apiUrl}/${id}`, resource);
+  updatePassengerResource(id: number, resource: ResourceData) {//update passenger resource
+    return this.http.put<ResourceData>(`${this.apiUrl}/${id}`, resource);
   }
   
   deleteResource(id: number) {//delete a resource
