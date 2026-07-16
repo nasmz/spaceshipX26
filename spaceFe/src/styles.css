@@ -1,3 +1,274 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+.success-toast {
+	background-color: #28a745 !important;
+}
+.failed-toast {
+	background-color: #dc3545 !important;
+}
+.main-toast {
+	color: #FFFFFF;
+	min-width: 350px;
+}
+.img-tbl {
+	max-height: 80px;
+}
+.img-gall {
+	max-height: 132px;
+}
+a:not(.pointerless) {
+	cursor: pointer;
+}
+.dont-show {
+	display: none !important;
+}
+.fc-h-event .fc-event-title{
+	white-space: normal;
+}
+#sheet {
+    border:1px solid black;
+	width: 320px;
+	height: 80px;
+}
+#toastsContainerBottomRight {
+	z-index: 1051;
+}
+.ml-1{
+	margin-left: 1em;
+}
+.mt-1{
+	margin-top: 1em;
+}
+.ml-1{
+	margin-left: 1em;
+}
+span.smaller {
+	font-size: 0.8rem;
+	font-style: italic;	
+}
+.bold-text{
+	font-weight:700 !important;
+}
+.widget-user .widget-user-image>img {
+	height: 90px !important;
+	object-fit: cover;
+}
+.img-size-64{
+	height: 64px !important;
+	object-fit: cover;
+}
+.img-size-32{
+	height: 32px !important;
+	object-fit: cover;
+}
+.img-full-width{
+	max-width: 100%;
+	height: auto;
+}
+.img-full-100{
+	width: 100%;
+}
+a.no-href {
+	cursor: pointer;
+}
+.table td, .table th{
+	white-space: pre-line;
+}
+
+.badge-pinky {
+	color: #fff;
+    background-color: #e83e8c;
+}
+.multiselect.dropdown-toggle.custom-select{
+	height: unset !important;
+	border-radius: unset !important;
+	padding:0.15rem 1.75rem 0.15rem .75rem !important;
+	box-shadow:unset !important;
+}
+.color-white{
+	color: #ffffff !important;
+}
+.force-hide{
+	display: none !important;
+}
+
+.login-w-bg {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+	padding: 10px;
+	background-color: white;
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content{
+	min-height: calc(100vh - 2rem);
+}
+html[data-theme=interaction] .main-content{
+	background-color: aliceblue;
+	min-height: calc(100vh - 2rem);
+}
+html[data-theme=default] .main-content{
+	background-color: unset;
+	min-height: calc(100vh - 2rem);
+}
+.card-body, .card-header, .card-footer{
+	padding: 0.5rem 0.5rem !important;
+}
+.card{
+	margin-bottom: 0 !important;
+}
+.table-width{
+	padding: 0 20px;
+    width: -webkit-fill-available;
+}
+.table td{
+	padding: 0.25rem 0.5rem !important;
+}
+.table.table-vessel-info th{
+	padding: 0.25rem !important;
+}
+.table thead{
+	background-color: #0C7785 !important;
+}
+.table thead.table-aqua th{
+	color: #a1e9f1 !important;
+}
+
+[data-layout=vertical][data-sidebar-size=sm]{
+	min-height: auto;
+	padding-bottom: 2rem;
+}
+.ml-1rem{
+	margin-left: 1rem;
+}
+.ml-2rem{
+	margin-left: 2rem;
+}
+.ml-3rem{
+	margin-left: 3rem;
+}
+.ml-4rem{
+	margin-left: 4rem;
+}
+.ml-5rem{
+	margin-left: 5rem;
+}
+[data-layout=vertical][data-sidebar-size=sm]{
+	min-height: unset !important;
+}
+.choices[data-type*=select-one] .choices__inner{
+	padding-bottom: 0.25rem !important;
+}
+.choices__inner{
+	padding: 5.5px 7.5px 1.75px !important;
+	min-height: 40px !important;
+	background-color: #fff !important;
+}
+.choices__list{
+	padding-left: 10px !important;
+}
+.dropdown-nav .choices{
+	width: 275px;
+}
+.login-box, .register-box{
+	width: 440px;
+}
+.b-0{
+	border: 0px !important;
+}
+.text-right{
+	text-align: right !important;
+}
+.text-bold{
+	font-weight: bold !important;
+	color: #080808;
+}
+.text-large{
+	font-size: 45px;
+}
+.text-nav{
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 0px;
+	padding-left: 20px
+}
+.nav-position{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.logo{
+	line-height: 1rem !important;
+	width: 10%;
+	height:85%;
+}
+.app-menu.navbar-menu{
+	position: fixed !important;
+}
+.left-section {
+    width: 50%;
+    height: 100vh;
+    background-color: #080808; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.img-logo{
+    width: 40%;
+    height: 40%;
+    align-items: center;
+	background-color: #FFFFFF;
+}
+.action-btn{
+	width: 10%;
+}
+.pad-page-ctnt{
+	padding-bottom: 0px;
+}
+#navbar-nav .nav-item {
+   padding-bottom: 12px; 
+}
+.sidebar-container {
+	height: 100vh;
+	overflow-y: auto; 
+	padding-right: 5px; 
+	scroll-behavior: smooth;
+}
+.sidebar-container::-webkit-scrollbar {
+	width: 8px;
+}
+.sidebar-container::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+#scrollbar {
+	max-height: 100vh;
+	overflow: hidden;
+}
+#scrollbar .sidebar-container {
+	max-height: calc(100vh - 50px);
+}
