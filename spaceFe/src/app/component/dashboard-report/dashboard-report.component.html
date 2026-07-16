@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h3>Resource Usage Report</h3>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>No.</th>
+        <th>Passenger ID</th>
+        <th>Resource ID</th>
+        <th>Resource Name</th>
+        <th>Usage Count</th>
+        <th>Usage Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let report of usageReports; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ report.passengerId }}</td>
+        <td>{{ report.resourceId }}</td>
+        <td>{{ report.resourceName }}</td>
+        <td>{{ report.usageCount }}</td>
+        <td>{{ report.usageDate | date:'dd/MM/yyyy' }}</td>
+        <td>
+          <span
+            class="badge"
+            [ngClass]="{
+              'bg-success': report.status === 'Completed',
+              'bg-warning text-dark': report.status === 'In Use',
+              'bg-danger': report.status === 'Cancelled'
+            }">
+            {{ report.status }}
+          </span>
+        </td>
+      </tr>
+
+      <tr *ngIf="usageReports.length === 0">
+        <td colspan="7" class="text-center">
+          No usage reports found.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

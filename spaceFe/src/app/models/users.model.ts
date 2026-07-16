@@ -1,4 +1,4 @@
-export interface Passenger {
+export interface UsersData {
     id: number;
     name: string;
     email: string;

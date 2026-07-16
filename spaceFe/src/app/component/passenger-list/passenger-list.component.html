@@ -1,1 +1,74 @@
-<p>passenger-list works!</p>
+<div class="vertical-overlay"></div>
+<div class="main-content" >
+	<div class="page-content">
+		<div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="page-title-box d-sm-flex align-items-center justify-content-between mx-2">
+            <h4 class="mb-sm-0">Passenger List</h4>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <!-- end page title -->
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+
+            <div class="card-body">
+              <div id="customerList">
+                <div class="row g-4 mb-3">
+                </div>
+
+                <div class="table-responsive table-card mt-3 mb-1 table-width">
+                  <table class="table align-middle table-nowrap" id="customerTable">
+                    <thead class="table-light">
+                      <tr>
+                        <th class="sort action-btn" data-sort="no">No</th>
+                        <th class="sort" data-sort="name">Name</th>
+                        <th class="sort" data-sort="email">Email</th>
+                        <th class="sort" data-sort="age">Age</th>
+                        <th class="sort" data-sort="gender">Gender</th>
+                        <th class="sort" data-sort="membership_level">Membership Level</th>
+                        <th class="sort" data-sort="status">Status</th>
+                        <th class="sort" data-sort="type">Type</th>
+                        <th class="sort action-btn" data-sort="action">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="list form-check-all">
+                      <!-- Traditional ngFor structural directive loop -->
+                       <tr *ngFor="let item of usersList; let i = index">
+                          <td>{{ i + 1 }} </td>
+                          <td>{{ item.name }}</td>
+                          <td>{{ item.email }}</td>
+                          <td>{{ item.age }}</td>
+                          <td>{{ item.gender }}</td>
+                          <td>{{ item.membershipLevel }}</td>
+                          <td>{{ item.status }}</td>
+                          <td>{{ item.type }}</td>
+                          <td>
+                            <button class="btn btn-primary" >Edit</button>
+                            <button class="btn btn-danger" >Delete</button>
+                          </td>
+                        </tr>
+                        
+                        <!-- Fallback if array is empty -->
+                        <tr *ngIf="usersList.length === 0">
+                          <td colspan="5">No passengers found.</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div><!-- end card -->
+          </div>
+          <!-- end col -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+  </div>  
+

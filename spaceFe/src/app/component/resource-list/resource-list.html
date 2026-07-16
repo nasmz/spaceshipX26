@@ -89,10 +89,10 @@
                   </div>
                   <div class="col-sm">
                     <div class="d-flex justify-content-sm-end">
-                      <div class="search-box ms-2">
+                      <!-- <div class="search-box ms-2">
                         <input type="text" class="form-control search" placeholder="Search...">
                         <i class="ri-search-line search-icon"></i>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -101,23 +101,23 @@
                   <table class="table align-middle table-nowrap" id="customerTable">
                     <thead class="table-light">
                       <tr>
-                        <th class="sort action-btn" data-sort="id">No</th>
-                        <th class="sort" data-sort="team_name">Name</th>
-                        <th class="sort action-btn" data-sort="action">Action</th>
-                        <th class="sort" data-sort="team_name">Name</th>
+                        <th class="sort action-btn" data-sort="no">No</th>
+                        <th class="sort" data-sort="resource_name">Resources Name</th>
+                        <th class="sort" data-sort="resource_level">Access Level</th>
+                        <th class="sort" data-sort="resource_status">Resource Status</th>
                         <th class="sort action-btn" data-sort="action">Action</th>
                       </tr>
                     </thead>
                     <tbody class="list form-check-all">
                       <!-- Traditional ngFor structural directive loop -->
-                        <tr *ngFor="let item of resources">
-                          <td>{{ item.id }}</td>
-                          <td><strong>{{ item.resourceName }}</strong></td>
+                       <tr *ngFor="let item of resources; let i = index">
+                          <td>{{ i + 1 }} </td>
+                          <td>{{ item.resourceName }}</td>
                           <td>{{ item.resourcesLevel }}</td>
                           <td>{{ item.status }}</td>
-                          <!-- (click)="editResource(item)" (click)="deleteResource(item.id)"-->
                           <td>
                             <button class="btn btn-primary" >Edit</button>
+                            
                             <button class="btn btn-danger" >Delete</button>
                           </td>
                         </tr>
