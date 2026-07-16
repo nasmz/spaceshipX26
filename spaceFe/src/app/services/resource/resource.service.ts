@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Resource } from '../../models/resource.model'; // model resources data
+import { ResourcePassenger } from '../../models/resource.model'; // model resources data
 
 @Injectable({
   providedIn: 'root',
@@ -12,27 +12,27 @@ export class ResourceService {
   constructor(private readonly http: HttpClient) { }
 
   getResourcesList() {//get all resources
-    return this.http.get<Resource[]>(this.apiUrl);
+    return this.http.get<ResourcePassenger[]>(this.apiUrl);
   }
 
   getResourceById(id: number) {//get a resource by ID
-    return this.http.get<Resource>(`${this.apiUrl}/${id}`);
+    return this.http.get<ResourcePassenger>(`${this.apiUrl}/${id}`);
   }
 
-  addResource(resource: Resource) {//add a new resource
-    return this.http.post<Resource>(this.apiUrl, resource);
+  addResource(resource: ResourcePassenger) {//add a new resource
+    return this.http.post<ResourcePassenger>(this.apiUrl, resource);
   }
 
-  updatePassengerResource(id: number, resource: Resource) {//update passenger resource
-    return this.http.put<Resource>(`${this.apiUrl}/${id}`, resource);
+  updatePassengerResource(id: number, resource: ResourcePassenger) {//update passenger resource
+    return this.http.put<ResourcePassenger>(`${this.apiUrl}/${id}`, resource);
   }
   
   deleteResource(id: number) {//delete a resource
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
-  accessResource(id: number, quantity: number) {//access a resource for passenger
-    return this.http.post(`${this.apiUrl}/${id}/access`, { quantity });
+  accessResource(id: number) {//access a resource for
+    return this.http.post(`${this.apiUrl}/${id}/access`, {});
   }
 
 }

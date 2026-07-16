@@ -3,6 +3,6 @@ export interface Usage {
     passengerId: number;
     resourceId: number;
     resourceName: string;
-    quantity: number;
-    dateUsage: Date;
+    usageCount: number;
+    usageDate: Date;
 }

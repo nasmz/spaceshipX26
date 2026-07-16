@@ -1,8 +1,6 @@
-export interface Resource {
+export interface ResourceData {
     id: number;
-    name: string;
-    type: string;
-    category: string;
-    quantity: number;
-    status: string;
+    resourceName: string;
+    resourcesLevel: 'Silver' | 'Gold' | 'Platinum';    
+    status: 'Available' | 'Unavailable';
 }
