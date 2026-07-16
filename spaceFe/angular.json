@@ -16,17 +16,58 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+                  "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+               "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/icons.min.css",
+              "src/assets/css/app.min.css",
+              "src/assets/css/custom.min.css",
+              "src/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "src/assets/plugins/fullcalendar/main.min.css",
+              "src/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css",
+              "src/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css",
+              "src/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css",
+              "src/assets/plugins/choices/css/choices.min.css",
+              "src/assets/css/mapbox.css",
+              "src/assets/plugins/toastr/toastr.min.css"
+          
+            ],
+            "scripts": [
+              "src/assets/js/jquery/jquery.min.js",
+              "src/assets/js/mapbox.js",
+              "src/assets/js/layout.js",
+              "src/assets/libs/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/libs/simplebar/simplebar.min.js",    
+              "src/assets/libs/list.js/list.min.js",
+              "src/assets/libs/list.pagination.js/list.pagination.min.js",
+              "src/assets/libs/apexcharts/apexcharts.min.js",
+              "src/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
+              "src/assets/plugins/jquery-mousewheel/jquery.mousewheel.js",
+              "src/assets/plugins/datatables/jquery.dataTables.min.js",
+              "src/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js",
+              "src/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js",
+              "src/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js",
+              "src/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js",
+              "src/assets/plugins/jszip/jszip.min.js",
+              "src/assets/plugins/pdfmake/pdfmake.min.js",
+              "src/assets/plugins/pdfmake/vfs_fonts.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.html5.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.print.min.js",
+              "src/assets/plugins/datatables-buttons/js/buttons.colVis.min.js",
+              "src/assets/plugins/chart.js/Chart.min.js",
+              "src/assets/plugins/jquery-validation/jquery.validate.min.js",
+              "src/assets/plugins/fullcalendar/main.min.js",
+              "src/assets/plugins/choices/js/choices.min.js",
+              "src/assets/plugins/toastr/toastr.min.js",
+              "src/assets/libs/flatpickr/flatpickr.min.js"
             ]
           },
           "configurations": {

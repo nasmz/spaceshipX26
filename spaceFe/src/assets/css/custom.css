@@ -1,0 +1,45 @@
+/*
+Template Name: Steex - Admin & Dashboard Template
+Author: Themesbrand
+Website: https://themesbrand.com/
+Contact: support@themesbrand.com
+File: Custom Css File
+*/
+.main-content{
+	background-color: aliceblue;
+}
+.card-body, .card-header{
+	padding: 0.5rem 0.5rem !important;
+}
+.card{
+	margin-bottom: 0 !important;
+}
+.table td{
+	padding: 0.25rem 0.5rem !important;
+}
+.table thead{
+	background-color: #0C7785 !important;
+}
+.table thead.table-aqua th{
+	color: #a1e9f1 !important;
+}
+
+[data-layout=vertical][data-sidebar-size=sm]{
+	min-height: auto;
+	padding-bottom: 2rem;
+}
+.ml-1rem{
+	margin-left: 1rem;
+}
+.ml-2rem{
+	margin-left: 2rem;
+}
+.ml-3rem{
+	margin-left: 3rem;
+}
+.ml-4rem{
+	margin-left: 4rem;
+}
+.ml-5rem{
+	margin-left: 5rem;
+}
